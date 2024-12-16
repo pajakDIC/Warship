@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BATTLESHIP</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        div#radar {
+            width: 50px;
+            height: 500px;
+            opacity: 1;
+            background: url("model/pictures/radar.gif") no-repeat;
+            z-index: 2;
+        }
+        div#radar1 {
+            width: 50px;
+            height: 500px;
+            opacity: 1;
+            background: url("model/pictures/radar.gif") no-repeat;
+        }
+        div#board {
+            position: relative;
+            width: 1024px;
+            height: 863px;
+            margin: auto;
+            background: url("model/pictures/board.jpg") no-repeat;
+        }
+        div#messangeArea {
+            position: absolute;
+            font-size: 3em;
+            top: 10px;
+            left: 80px;
+            color: darkred;
+            background: url("model/pictures/sirena.gif") no-repeat center center;
+        }
+        .hit {
+            background: url("model/pictures/ship.png") no-repeat center center;
+        }
+        .miss {
+            background: url("model/pictures/miss.png") no-repeat center center;
+        }
+        table {
+            position: absolute;
+            top: 85px;
+            left: 175px;
+            border-spacing: 0px;
+        }
+        td {
+            width: 93px;
+            height: 98px;
+        }
+        form {
+            position: absolute;
+            bottom: -10px;
+            right: 80px;
+            padding: 15px;
+            background-color: rgb(60, 100, 19);
+        }
+        mass {
+            position: absolute;
+            bottom: 700px;
+            right: 0px;
+            padding: 25px;
+            background-color: rgb(60, 100, 19);
+            color: rgb(00, 207, 30);
+            opacity: 1;
+            background: url("model/pictures/radar.gif") no-repeat center center;
+
+        }
+        form input {
+            background-color: rgb(152, 207, 113);
+            border-color: rgb(83, 175, 19);
+            font-size: 1em;
+        }
+
+    </style>
+</head>
+<body>
+<div id = 'radar2'></div>
+<div id = "board">
+    <div id = 'radar'></div>
+    <div id = 'radar1'></div>
+    <div id = 'messangeArea'></div>
+
+<table>
+    <tr>
+        <td id="00"></td> <td id="01"></td> <td id="02"></td> <td id="03"></td>
+        <td id="04"></td> <td id="05"></td> <td id="06"></td>
+    </tr>
+
+    <tr>
+        <td id="10"></td> <td id="11"></td> <td id="12"></td> <td id="13"></td>
+        <td id="14"></td> <td id="15"></td> <td id="16"></td>
+    </tr>
+
+    <tr>
+        <td id="20"></td> <td id="21"></td> <td id="22"></td> <td id="23"></td>
+        <td id="24"></td> <td id="25"></td> <td id="26"></td>
+    </tr>
+
+    <tr>
+        <td id="30"></td> <td id="31"></td> <td id="32"></td> <td id="33"></td>
+        <td id="34"></td> <td id="35"></td> <td id="36"></td>
+    </tr>
+
+    <tr>
+        <td id="40"></td> <td id="41"></td> <td id="42"></td> <td id="43"></td>
+        <td id="44"></td> <td id="45"></td> <td id="46"></td>
+    </tr>
+
+    <tr>
+        <td id="50"></td> <td id="51"></td> <td id="52"></td> <td id="53"></td>
+        <td id="54"></td> <td id="55"></td> <td id="56"></td>
+    </tr>
+
+    <tr>
+        <td id="60"></td> <td id="61"></td> <td id="62"></td> <td id="63"></td>
+        <td id="64"></td> <td id="65"></td> <td id="66"></td>
+    </tr>
+</table>
+    <form>
+        <input type = 'text' id = 'guessInput' placeholder="координати з великої!">
+        <input type = 'button' id = 'fireButon' value = 'Вогонь!'>
+
+
+    </form>
+    <mass>
+        РОЗПОЧНІМО ГРУ
+
+    </mass>
+</div>
+<script src="script/WarShip.js";
+></script>
+<h1> Play battleship! </h1>
+</body>
+</html>
